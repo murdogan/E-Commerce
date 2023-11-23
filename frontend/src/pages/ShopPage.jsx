@@ -13,7 +13,6 @@ const ShopPage = () => {
       <Products />
       <CampaigsSingle />
       <Products />
-
       <Footer />
     </React.Fragment>
   );

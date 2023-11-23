@@ -7,13 +7,9 @@ import Blogs from "../components/Blogs/Blogs";
 import Brands from "../components/Brands/Brands";
 import CampaigsSingle from "../components/Campaigns/CampaignSingle";
 
-import Header from "../components/Layout/Header/Header";
-import Footer from "../components/Layout/Footer/Footer";
-
 const HomePage = () => {
   return (
     <React.Fragment>
-      <Header />
       <Sliders />
       <Categories />
       <Products />
@@ -22,8 +18,6 @@ const HomePage = () => {
       <Blogs />
       <Brands />
       <CampaigsSingle />
-
-      <Footer />
     </React.Fragment>
   );
 };
