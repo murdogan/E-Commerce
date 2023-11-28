@@ -59,7 +59,7 @@ const Products = () => {
           <div className="glide__track">
             <Slider {...sliderSettings}>
               {products.map((product) => (
-                <ProductItem product={product} key={product.id} />
+                <ProductItem productItem={product} key={product.id} />
               ))}
             </Slider>
           </div>
