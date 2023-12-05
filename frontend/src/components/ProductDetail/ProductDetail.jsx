@@ -12,7 +12,7 @@ const ProductDetail = () => {
           <div className="single-content">
             <main className="site-main">
               <Gallery />
-              I<Info />
+              <Info />
             </main>
           </div>
 
