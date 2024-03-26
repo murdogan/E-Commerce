@@ -1,3 +1,4 @@
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
@@ -9,7 +10,15 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
 import AdminUserPage from "./pages/Admin/AdminUserPage";
 
-import "./App.css";
+import CategoryPage from "./pages/Admin/Categories/CategoryPage";
+import UpdateCategoryPage from "./pages/Admin/Categories/UpdateCategoryPage";
+import CreateCategoryPage from "./pages/Admin/Categories/CreateCategoryPage";
+import ProductPage from "./pages/Admin/Products/ProductPage";
+import CreateProductPage from "./pages/Admin/Products/CreateProductPage";
+import UpdateProductPage from "./pages/Admin/Products/UpdateProductPage";
+import CouponPage from "./pages/Admin/Coupons/CouponPage";
+import CreateCouponPage from "./pages/Admin/Coupons/CreateCouponPage";
+import UpdateCouponPage from "./pages/Admin/Coupons/UpdateCouponPage";
 
 function App() {
   return (
@@ -24,6 +33,15 @@ function App() {
       <Route path="/blog/:id" element={<BlogDetailPage />} />
       <Route path="/admin/*">
         <Route path="users" element={<AdminUserPage />} />
+        <Route path="categories" element={<CategoryPage />} />
+        <Route path="categories/create" element={<CreateCategoryPage />} />
+        <Route path="categories/update/:id" element={<UpdateCategoryPage />} />
+        <Route path="products" element={<ProductPage />} />
+        <Route path="products/create" element={<CreateProductPage />} />
+        <Route path="products/update/:id" element={<UpdateProductPage />} />
+        <Route path="coupons" element={<CouponPage />} />
+        <Route path="coupons/create" element={<CreateCouponPage />} />
+        <Route path="coupons/update/:id" element={<UpdateCouponPage />} />
       </Route>
     </Routes>
   );

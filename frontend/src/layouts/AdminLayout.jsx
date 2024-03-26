@@ -125,7 +125,7 @@ const AdminLayout = ({ children }) => {
       icon: <RollbackOutlined />,
       label: "Ana Sayfaya Git",
       onClick: () => {
-        navigate(`/`);
+        window.location.href = "/";
       },
     },
   ];
@@ -158,7 +158,6 @@ const AdminLayout = ({ children }) => {
                 className="site-layout-background"
                 style={{ padding: "24px 50px", minHeight: 360 }}
               >
-                asdfa
                 {children}
               </div>
             </Content>

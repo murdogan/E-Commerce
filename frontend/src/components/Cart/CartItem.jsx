@@ -9,17 +9,17 @@ const CartItem = ({ cartItems }) => {
     <tr className="cart-item">
       <td></td>
       <td className="cart-image">
-        <img src={cartItems.img.singleImage} alt="" />
+        <img src={cartItems.img[0]} alt="" />
         <i
           className="bi bi-x delete-cart"
           onClick={() => removeFromCart(cartItems.id)}
         ></i>
       </td>
       <td>{cartItems.name}</td>
-      <td>${cartItems.price.newPrice.toFixed(2)}</td>
+      <td>${cartItems.price.toFixed(2)}</td>
       <td className="product-quantity">{cartItems.quantity}</td>
       <td className="product-subtotal">
-        ${(cartItems.price.newPrice * cartItems.quantity).toFixed(2)}
+        ${(cartItems.price * cartItems.quantity).toFixed(2)}
       </td>
     </tr>
   );
