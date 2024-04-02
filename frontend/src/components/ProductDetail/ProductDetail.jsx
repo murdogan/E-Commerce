@@ -3,7 +3,9 @@ import Gallery from "./Galery/Gallery";
 import Info from "./Info/Info";
 import "./ProductDetail.css";
 import Tabs from "./Tabs/Tabs";
-const ProductDetail = () => {
+import PropTypes from "prop-types";
+
+const ProductDetail = ({ singleProduct }) => {
   return (
     <section className="single-product">
       <div className="container">
@@ -11,12 +13,12 @@ const ProductDetail = () => {
           <BreadCrumb />
           <div className="single-content">
             <main className="site-main">
-              <Gallery />
-              <Info />
+              <Gallery singleProduct={singleProduct} />
+              <Info singleProduct={singleProduct} />
             </main>
           </div>
 
-          <Tabs />
+          <Tabs singleProduct={singleProduct} />
         </div>
       </div>
     </section>
@@ -24,3 +26,7 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+
+ProductDetail.propTypes = {
+  singleProduct: PropTypes.object,
+};
