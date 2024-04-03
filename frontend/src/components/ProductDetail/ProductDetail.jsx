@@ -5,7 +5,7 @@ import "./ProductDetail.css";
 import Tabs from "./Tabs/Tabs";
 import PropTypes from "prop-types";
 
-const ProductDetail = ({ singleProduct }) => {
+const ProductDetail = ({ singleProduct, setSingleProduct }) => {
   return (
     <section className="single-product">
       <div className="container">
@@ -18,7 +18,10 @@ const ProductDetail = ({ singleProduct }) => {
             </main>
           </div>
 
-          <Tabs singleProduct={singleProduct} />
+          <Tabs
+            singleProduct={singleProduct}
+            setSingleProduct={setSingleProduct}
+          />
         </div>
       </div>
     </section>
@@ -29,4 +32,5 @@ export default ProductDetail;
 
 ProductDetail.propTypes = {
   singleProduct: PropTypes.object,
+  setSingleProduct: PropTypes.func,
 };

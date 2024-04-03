@@ -24,7 +24,10 @@ const ProductDetailsPage = () => {
   }, [apiUrl, productId]);
 
   return singleProduct ? (
-    <ProductDetail singleProduct={singleProduct} />
+    <ProductDetail
+      singleProduct={singleProduct}
+      setSingleProduct={setSingleProduct}
+    />
   ) : (
     <p>Ürün Yükleniyor.</p>
   );
